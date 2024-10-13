@@ -138,11 +138,10 @@ class StartInq(tk.Toplevel):
             # Checks email in valid format
             elif not validate_email(email):
                 error_label.config(text="Invalid email format.", fg="red")
+            # If no errors change 'error_label' to display the text below
             else:
-                # Implement your email sending logic here
-                # You can use smtplib or other libraries
-                print("Email sent successfully!")
                 error_label.config(text="Email sent successfully!", fg="green", bg="#fed12c")
+
         # Entry Fields
         name_label = tk.Label(self, text="Name:")
         name_label.pack()

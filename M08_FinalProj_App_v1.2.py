@@ -66,6 +66,12 @@ class About_Us(tk.Toplevel):
             self.after(25, update, index)
         # Starts Logo GIF animation
         update(0)
+        # About Us Text
+        text = Label(self,
+                    text = "1) We select the best shipment route and approve it with you\n2) We choose comfortable container for your pet's shipment\n3) We arrange for all veterinary procedures required for the travel\n4) We obtain the required paperwork for the shipment\n5) We air ship your pet\n6) You pick up a happy pet on arrival",
+                    font = ('Forte', 14,'bold'),bg='#f7c394'
+                    ).pack()
+
 
 # Contact window "Start Inquiry"
 class StartInq(tk.Toplevel):
@@ -137,7 +143,7 @@ class StartInq(tk.Toplevel):
                 # You can use smtplib or other libraries
                 print("Email sent successfully!")
                 error_label.config(text="Email sent successfully!", fg="green", bg="#fed12c")
-
+        # Entry Fields
         name_label = tk.Label(self, text="Name:")
         name_label.pack()
 
